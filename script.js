@@ -69,14 +69,15 @@ else (cards[i].style.color = "white") && (picture[i].style.width = "20%");
 };
 
 // Fonctionnalité 7
-
+var cardsAll = document.getElementsByClassName('col-md-4');
+var cardLast = cards[cards.length - 1]; 
+var cardFirst = document.getElementsByClassName('col-md-4')[0];
 var button = document.getElementsByClassName("btn btn-secondary my-2")[0];
+var parent = cardFirst.parentNode;
 button.addEventListener("click", function (){
 	console.log('hop')
+	parent.insertBefore(cardLast, cardFirst);
 });
 
 // Fonctionnalité 8
-var button_1 = document.getElementsByClassName("btn btn-primary my-2")[0];
-button_1.addEventListener("click", function (){
-	console.log('hello')
-});
+// Fonctionnalité 9
